@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="utf-8">
+        <title>Programming workshop</title>
+
+    </head>
+    <body>
+        <header>
+            <h1>FSKM Programming workshop 2026</h1>
+            <p>learn - code - connect</p>
+        </header>
+        <nav>
+            <a href="#about">About<br></a>
+            <a href="#schedule">Schedule<br></a>
+            <a href="#register">Register<br></a>
+        </nav>
+        <section id="about">
+            <h2>About the event</h2>
+
+            <article>
+                <h3>Javascript basic with Dr.Ahmad</h3>
+                <p>A beginner friendly introduction to Javascript programming.</p>
+            </article>
+
+            <article>
+                <h3>Web development with Dr.Amin</h3>
+                <p>Build your first web page using HTML.</p>
+            </article>
+        </section>
+
+        <section id="schedule">
+            <h2>Event schedule</h2>
+            <table border="1">
+                <tr>
+                    <th>Time</th>
+                    <th>Activity</th>
+                    <th>Venue</th>
+                    <th>Person in Charge</th>
+                </tr>
+                <tr>
+                    <td>8.00 A.M</td>
+                    <td>Registration</td>
+                    <td>Dewan Sultan Mizan</td>
+                    <td>Facilitator</td>
+                </tr>
+                <tr>
+                    <td>9.00 A.M</td>
+                    <td>Introduction to Javascript</td>
+                    <td rowspan="2">BYOD2</td>
+                    <td>Dr. Ahmad</td>
+                </tr>
+                <tr>
+                    <td>11.00 A.M</td>
+                    <td>Practice Coding</td>
+                    <td>Dr. Ahmad</td>
+                </tr>
+                <tr>
+                    <td>1.00 P.M</td>
+                    <td colspan="3">Lucnh break</td>
+                </tr>
+                <tr>
+                    <td>2.00 P.M</td>
+                    <td>Web Development</td>
+                    <td>BYOD1</td>
+                    <td>Dr.Amin</td>
+                </tr>
+                <tr>
+                    <td>4.30 P.M</td>
+                    <td>Closing and prizing</td>
+                    <td>Dewan Sultan Mizan</td>
+                    <td>Comittee</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="register">
+            <h2>Registration</h2>
+            <form action="register.html" method="post">
+                <p>
+                    <label for="fullname">Full Name: <br></label>
+                    <input type="text" id="fullname" name="fullname">
+                </p>
+                <p>
+                    <label for="matric">Matric Number: <br></label>
+                    <input type="text" id="matric" name="matric">
+                </p>
+                <p>
+                    <label for="email">E-mail: <br></label>
+                    <input type="text" id="email" name="email">
+                </p>
+
+                <fieldset>
+                    <legend>Year of Study</legend>
+                    <input type="radio" id="y1" name="year" value="1">
+                    <label for="y1">Year 1</label>
+                    <input type="radio" id="y2" name="year" value="2">
+                    <label for="y2">Year 2</label>
+                    <input type="radio" id="y3" name="year" value="3">
+                    <label for="y3">Year 3</label>
+                    <input type="radio" id="y4" name="year" value="4">
+                    <label for="y4">Year 4</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Sessions to Join</legend>
+                    <input type="checkbox" id="s1" name="sessions" value="Javascript">
+                    <label for="s1">Javascript Basics<br></label>
+                    <input type="checkbox" id="s2" name="sessions" value="coding">
+                    <label for="s2">Practice Coding<br></label>
+                    <input type="checkbox" id="s3" name="sessions" value="web">
+                    <label for="s3">Web Development<br></label>
+                </fieldset>
+
+                <p>
+                    <label for="programme">Programme:</label>
+                    <select id="programme" name="programme">
+                        <option value="cs">Computer Science<br></option>
+                        <option value="se">Software Engineering<br></option>
+                        <option value="ds">Data Science<br></option>
+                        <option value="math">Mathematics<br></option>
+                    </select>
+                </p>
+
+                <input type="submit" value="Register">
+            </form>
+            
+        </section>
+
+        <footer>
+            <p>Organised by Faculty of Computer Science and Mathematics</p>
+            <p>&copy; 2026 FSKM. All rights reserved.</p>
+        </footer>
+
+    </body>
+</html>

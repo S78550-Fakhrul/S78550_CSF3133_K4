@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Course Feedback</title>
+</head>
+<body>
+  <!--
+    Error 1 (Line 10): </head> used to close <header>; should be </header>
+    Error 2 (Line 20): <td>Rating</td> in header row; should be <th>
+    Error 3 (Line 25): missing </tr> before the next <tr> at line 26
+    Error 4 (Line 28): colspan="3" exceeds the 3 columns of the table
+    Error 5 (Line 32): missing </td> after "Semantic HTML"
+    Error 6 (Line 39/40): label for="name" does not match input id="fullname"
+    Error 7 (Line 42/44): radio buttons have different names (good, poor)
+    Error 8 (Line 47): label for="labs" does not match input id="lab"
+    Error 9 (Line 49): </from> typo; should be </form>
+    Error 10 (Line 52): &copy missing semicolon
+    Error 11 (Line 41): <label> with no for attribute; replaced with fieldset/legend
+  -->
+
+  <!-- HEADER -->
+  <header>
+    <h1>CSF3133 Course Feedback</h1>
+  </header>
+
+  <!-- NAV: added link to comments section -->
+  <nav>
+    <a href="#results">Results</a> |
+    <a href="#form">Feedback Form</a> |
+    <a href="#comments">Student Comments</a>
+  </nav>
+
+  <!-- RESULTS SECTION: summary table -->
+  <section id="results">
+    <h2>Feedback Summary</h2>
+    <table border="1">
+      <tr>
+        <th>Week</th>
+        <th>Topic</th>
+        <th>Rating</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Introduction to HTML</td>
+        <td>4.5</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Tables and Forms</td>
+        <td>4.2</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Semantic HTML</td>
+        <td>4.0</td>
+      </tr>
+      <!-- NEW: rowspan="2" - Weeks 4 and 5 share one Topic cell -->
+      <tr>
+        <td>4</td>
+        <td rowspan="2">Mini Project</td>
+        <td>4.3</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <!-- no Topic cell: covered by rowspan -->
+        <td>4.4</td>
+      </tr>
+      <!-- NEW: colspan="2" - label spans Week and Topic columns -->
+      <tr>
+        <td colspan="2">Average Rating</td>
+        <td>4.28</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- FORM SECTION -->
+  <section id="form">
+    <h2>Give Your Feedback</h2>
+    <form action="submit_feedback.php" method="post">
+      <label for="fullname">Name:</label>
+      <input type="text" id="fullname" name="name"><br>
+
+      <!-- NEW: e-mail input -->
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email"><br>
+
+      <!-- Radio group: same name; NEW third option "Average" -->
+      <fieldset>
+        <legend>Overall rating:</legend>
+        <input type="radio" id="good" name="rating" value="good">
+        <label for="good">Good</label>
+        <input type="radio" id="average" name="rating" value="average">
+        <label for="average">Average</label>
+        <input type="radio" id="poor" name="rating" value="poor">
+        <label for="poor">Poor</label>
+      </fieldset>
+
+      <input type="checkbox" id="lab" name="lab" value="yes">
+      <label for="lab">I attended all labs</label><br>
+
+      <!-- NEW: checkbox group -->
+      <fieldset>
+        <legend>Topics I want more practice on:</legend>
+        <input type="checkbox" id="t1" name="practice" value="tables">
+        <label for="t1">Tables</label>
+        <input type="checkbox" id="t2" name="practice" value="forms">
+        <label for="t2">Forms</label>
+        <input type="checkbox" id="t3" name="practice" value="semantic">
+        <label for="t3">Semantic HTML</label>
+      </fieldset>
+
+      <!-- NEW: section/group drop-down -->
+      <label for="group">Section/Group:</label>
+      <select id="group" name="group">
+        <option value="g1">Group 1</option>
+        <option value="g2">Group 2</option>
+        <option value="g3">Group 3</option>
+      </select><br>
+
+      <input type="submit" value="Submit">
+    </form>
+  </section>
+
+  <!-- NEW: COMMENTS SECTION with two articles -->
+  <section id="comments">
+    <h2>Student Comments</h2>
+    <article>
+      <h3>Aina</h3>
+      <p>The labs were very helpful for learning tables.</p>
+    </article>
+    <article>
+      <h3>Hakim</h3>
+      <p>I would like more practice with forms.</p>
+    </article>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Copyright &copy; 2026 CSF3133</p>
+  </footer>
+</body>
+</html>
