@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Booking</title>
+</head>
+<body>
+    <!--
+    Error 1 (Line 1): <!DOCTYPE> missing "html"
+    Error 2 (Line 9): <span> and <h1> closing tags overlap; span must close before h1
+    Error 3 (Line 11): content wrapped in inline <span>; should be a block <div> (also line 36)
+    Error 4 (Line 13): "<" typed directly; should be the entity &lt;
+    Error 5 (Line 13): &amp is missing the semicolon
+    Error 6 (Line 14): adult.value + child.value joins text ("2"+"3" = "23"); wrapped in Number()
+    Error 7 (Line 18): type="emial" is a typo; should be type="email"
+    Error 8 (Line 22/23): list="movies" does not match datalist id="movielist"
+    Error 9 (Line 32): range min="5" max="1" is reversed; should be min="1" max="5"
+    Error 10 (Line 33): output for="adult kid" refers to a non-existent id; should be "adult child"
+    Error 11 (Line 38): &Copy; has the wrong case; should be &copy;
+    Error 12 (Lines 54-55): duplicate </body> and </html> at the end
+  -->
+    <!-- Header -->
+     <div id="header">
+        <h1>e-Ticket <span>Your Campus Cinema</span></h1>
+     </div>
+
+     <!--Content-->
+     <div id="content">
+        <h2>Book Your Ticket</h2>
+        <p>Promotion : ticket &lt; RM10 for students &amp; staff!</p>
+
+        <form action="booking.php" method="post" oninput="total.value = Number(adult.value) + Number(child.value);
+         price.value = Number(adult.value) * 12 + Number(child.value) * 8">
+         <label for="name">Name : </label>
+         <input type="text" id="name" name="name" placeholder="Enter your name" required autofocus><br>
+
+         <label for="email">E-mail : </label>
+         <input type="email" id="email" name="email"><br>
+
+         <!--phone number with placeholder-->
+         <label for="phone">Phone number: </label>
+         <input type="tel" id="phone" name="phone" placeholder="012-34556789" required><br>
+
+         <label for="date">Show date:</label>
+         <input type="date" id="date" name="date"><br>
+
+         <!--show time input-->
+         <label for="time">Show time:</label>
+         <input type="time" id="time" name="time"><br>
+
+         <!--movie list-->
+         <label for="movie">Movie:</label>
+         <input id="movie" name="movie" list="movies"><br>
+         <datalist id="movies">
+            <option value="Space Rangers">
+            <option value="Kampung Comedy">
+         </datalist>
+
+         <label for="adult">Adult tickets:</label>
+         <input type="number" id="adult" name="adult" min="0" value="0"><br>
+
+         <label for="child">Child tickets:</label>
+         <input type="number" id="child" name="child" min="0" value="0"><br>
+
+         <label for="rating">Rate our services:</label>
+         <input type="range" id="rating" name="rating" min="1" max="5" step="1"><br>
+
+         <!--total ticket-->
+         Total tickets: <output name="total" for="adult child">0</output><br>
+
+         <!--total price-->
+         Total tickets: RM <output name="price" for="adult child">0</output><br>
+
+         <input type="submit" value="Book Now">
+        </form>
+     </div>
+
+     <!--Sidebar with now showing list-->
+     <div id="sidebar">
+        <h2>Now Showing</h2>
+        <ul>
+            <li><strong>Space Rangers</strong><span>(PG-13)</span></li>
+            <li><strong>Kampung Comedy</strong><span>(U)</span></li>
+        </ul>
+     </div>
+
+     <!--footer-->
+     <p>&copy; 2026 CineKampus. All rights reserved.</p>
+     <p>e-Ticket&reg; &ndash; Campus Cinema &lt; RM10 every Tuesday for students &amp; staff</p>
+</body>
+</html>
