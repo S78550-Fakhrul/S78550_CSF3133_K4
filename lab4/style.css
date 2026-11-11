@@ -1,0 +1,115 @@
+/* ===== GENERAL ===== */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f9fb;
+    color: #333333;
+    margin: 0;
+}
+
+/* ===== HEADER ===== */
+header {
+    background-color: #0b5e7e;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ===== TEXT DECORATION: headings ===== */
+h1 {
+    text-decoration: overline;
+}
+
+h2{
+    text-decoration: underline
+}
+
+/* ===== LINK STATES (order: link, visited, hover, active) ===== */
+a:link { color: #1a5276; }
+a:visited { color: #7d3c98; }
+a:hover { color: #e67e22; }
+a:active { color: #c0392b; }
+
+/* ===== NAVIGATION BAR ===== */
+nav {
+    background-color: #0b5e7e;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    width: 30%;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #0b5e7e;
+    padding: 14px 10px;
+}
+
+/* nav link states, written in the correct order */
+nav a:link, nav a:visited { color: #ffffff; }
+nav a:hover { background-color: #e67e22; color: #ffffff; }
+nav a:active { background-color: #c0392b; color: #ffffff; }
+
+/* ===== SECTIONS: percentage widths for small screens ===== */
+#destination, #video, #trip {
+    width: 90%;
+    margin: 20px auto;
+}
+
+/* ===== DESTINATION CARDS ===== */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+/* ===== PRICES: old price crossed out, new price highlighted ===== */
+.old-price {
+    text-decoration: line-through;
+    color: #888888;
+}
+.new-price {
+    color: #c0392b;
+    font-weight: bold;
+}
+
+/* ===== VIDEO: scales on small screens ===== */
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+figure {
+    margin: 0;
+    text-align: center;
+}
+
+figcaption {
+    font-style: italic;
+}
+
+/* ===== TRIP FORM ===== */
+.trip-form {
+    background-color: #ffffff;
+    border: 2px solid #0b5e7e;
+    padding: 15px;
+    width: 90%;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: #d6eaf8;
+    text-align: center;
+    padding: 15px;
+}

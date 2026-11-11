@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Terengganu</title>
+
+    <!-- EXTERNAL CSS: most of the styles are in style.css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- INTERNAL CSS: two rules for this page only -->
+    <style>
+        #trip {
+            background-color: #eaf6fb;
+            padding: 10px 15px;
+        }
+        .note {
+            font-style: italic;
+            color: #555555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Visit Terengganu</h1>
+        <p>Sun, sea and sand, made for students and visitors</p>
+    </header>
+
+    <!-- NAV: unordered list with links to each section -->
+    <nav>
+        <ul>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#trip">Trip</a></li>
+        </ul>
+    </nav>
+
+    <!-- DESTINATIONS SECTION: three articles with promotion prices -->
+    <section id="destinations">
+        <h2>Destinations</h2>
+
+        <article class="card">
+            <h3>Redang Island</h3>
+            <p>Crystal clear water and some of the best snorkelling in <strong>Malaysia</strong>.</p>
+            <p><span class="old-price">RM299</span><span class="new-price">RM199</span></p>
+        </article>
+
+        <article class="card">
+            <h3>Lake Kenyir</h3>
+            <p>The largest man made lake in Southeast Asia, with waterfalls and houseboats.</p>
+            <p><span class="old-price">RM249</span><span class="new-price">RM169</span></p>
+        </article>
+
+        <article class="card">
+            <h3>Kuala Terengganu Heritage Walk</h3>
+            <p>Explore Chinatown, the Crystal Mosque and the local craft market.</p>
+            <p><span class="old-price">RM99</span><span class="new-price">RM69</span></p>
+        </article>
+    </section>
+
+    <!-- VIDEO SECTION: video with source, fallback text and caption -->
+    <section id="video">
+        <h2>Watch Our Video</h2>
+        <figure>
+            <video width="640" height="360" controls>
+                <source src="visitganulab4.mp4" type="video/mp4">
+            </video>
+            <figcaption>Discover the beauty of Terengganu in one minute.</figcaption>
+        </figure>
+    </section>
+
+    <!-- TRIP SECTION: seats meter and interest form -->
+    <section id="trip">
+        <h2>Plan Your Trip</h2>
+        <p class="note">Seats are limited, so register early.</p>
+
+        <!-- Meter: seats filled out of 40 -->
+        <p>
+            <label for="seats">Seats filled:</label>
+            <meter id="seats" min="0" max="40" value="28">28 of 40</meter>  
+            28 of 40
+        </p>
+
+        <!-- Form styled with the class trip-form -->
+        <form class="trip-form" action="trip.php" method="post">
+            <p>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+            </p>
+            <p>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email">
+            </p>
+
+            <!-- Radio buttons: same name so only one can be selected -->
+            <fieldset>
+                <legend>Traveller type</legend>
+                <input type="radio" id="student" name="traveller" value="student">
+                <label for="student">Student</label>
+                <input type="radio" id="staff" name="traveller" value="staff">
+                <label for="staff">Staff</label>
+                <input type="radio" id="public" name="traveller" value="public">
+                <label for="public">Public</label>
+            </fieldset>
+
+            <!-- Checkboxes: interests -->
+            <fieldset>
+                <legend>Interests</legend>
+                <input type="checkbox" id="islands" name="interests" value="islands">
+                <label for="islands">Islands</label>
+                <input type="checkbox" id="food" name="interests" value="food">
+                <label for="food">Food</label>
+                <input type="checkbox" id="culture" name="interests" value="culture">
+                <label for="culture">Culture</label>
+                <input type="checkbox" id="nature" name="interests" value="nature">
+                <label for="nature">Nature</label>
+            </fieldset>
+
+            <p><input type="submit" value="Send"></p>
+        </form>
+    </section>
+
+    <!-- FOOTER: copyright and address with mailto link -->
+    <footer>
+        <p>&copy; 2026 Visit Terengganu</p>
+        <address>
+            Contact us: <a href="infoVisitTerengganu@gmail.com">infoVisitTerengganu@gmail.com</a>
+        </address>
+    </footer>
+</body>
+</html>
+

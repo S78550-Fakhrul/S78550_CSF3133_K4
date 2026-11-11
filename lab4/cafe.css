@@ -1,0 +1,49 @@
+/* ===== NAVIGATION BAR (moved from internal CSS) ===== */
+ul {
+  list-style-type: none;   /* Error 2 fixed: none, not "no" */
+  margin: 0;
+  padding: 0;
+}
+nav {
+  background-color: #6e2c00;
+}
+nav li {
+  display: inline-block;
+}
+nav a {
+  display: block;
+  background-color: #6e2c00;
+  padding: 14px 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+/* nav link states in the correct order */
+nav a:link, nav a:visited { color: #ffffff; }
+nav a:hover  { background-color: #e67e22; color: #ffffff; }
+nav a:active { background-color: #c0392b; color: #ffffff; }
+
+/* ===== PROMOTION: old price crossed out ===== */
+.old-price {
+  text-decoration: line-through;
+  color: #888888;
+}
+
+/* ===== VIDEO: responsive ===== */
+video {
+  max-width: 100%;
+  height: auto;
+}
+figure {
+  margin: 0;
+}
+figcaption {
+  font-style: italic;
+}
+
+/* ===== FEEDBACK FORM ===== */
+.feedback-form {
+  background-color: #fdf2e9;
+  border: 2px solid #6e2c00;
+  padding: 15px;
+  width: 90%;
+}
