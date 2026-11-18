@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Campus Bookstore</title>
+
+  <!-- GOOGLE FONTS: Roboto (text) and Merriweather (headings) in one link tag -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- EXTERNAL CSS: rel fixed (Error 1) -->
+  <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+  <!--
+    Error 1 (shop.html, Line 7): rel="stylesheets" should be rel="stylesheet"
+    Error 2 (shop.html, Line 10): style element placed inside body; moved to shop.css
+    Error 3 (shop.html, Line 18): style="color=#1B4F72;" uses = instead of :
+    Error 4 (shop.html, Line 20): table id="product" does not match CSS #products
+    Error 5 (shop.css, Line 2): font name 'Robotto' misspelled; should be 'Roboto'
+    Error 6 (shop.css, Line 4): background-repeat: no repeat; should be no-repeat
+    Error 7 (shop.css, Line 5): bacground-position misspelled; should be background-position
+    Error 8 (shop.css, Line 18): li a uses display: inline; should be display: block
+    Error 9 (shop.css, Line 23): selector li:a:hover is wrong; should be li a:hover
+    Error 10 (shop.css, Line 27): border-collapse: collapsed is invalid; should be collapse
+    Error 11 (shop.css, Line 34): tr:nth-child(2) only styles row 2; should be nth-child(even)
+    Error 12 (shop.css, Line 37): tr:hovered is invalid; should be tr:hover
+    Error 13 (shop.css, Line 45): missing semicolon after background-color: #f1f1f1
+  -->
+
+  <!-- NEW: HEADER with background image; title moved here -->
+  <header>
+    <h1>Campus Bookstore</h1>
+  </header>
+
+  <!-- NEW: NAV with .active class on the Home link -->
+  <nav>
+    <ul>
+      <li><a class="active" href="#home">Home</a></li>
+      <li><a href="#books">Books</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- NEW: MAIN content with intro paragraph and product table -->
+  <main id="books">
+    <p>Textbooks, stationery and more for every student.</p>
+    <table id="products">
+      <tr><th>Item</th><th>Category</th><th>Price (RM)</th></tr>
+      <tr><td>Web Design Basics</td><td>Textbook</td><td>45.00</td></tr>
+      <tr><td>A4 Notebook</td><td>Stationery</td><td>6.50</td></tr>
+      <tr><td>USB Drive 32GB</td><td>Gadget</td><td>25.00</td></tr>
+      <tr><td>Highlighter Set</td><td>Stationery</td><td>9.90</td></tr>
+    </table>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="contact">&copy; 2026 Campus Bookstore</footer>
+</body>
+</html>
